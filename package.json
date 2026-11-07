@@ -1,14 +1,15 @@
 {
   "name": "aiteaching-netlify-deploy",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cat payload.part* > aiTeaching-netlify-payload.zip && unzip -q -o aiTeaching-netlify-payload.zip -d . && mkdir -p public && printf '%s\n' '<!doctype html><html><head><meta charset=\"utf-8\"><title>aiTeaching MCP</title></head><body><h1>aiTeaching NEET Examiner</h1><p>MCP endpoint: <code>/.netlify/functions/mcp</code></p></body></html>' > public/index.html"
+    "build": "cat payload.part* > aiTeaching-netlify-payload.zip && unzip -q -o aiTeaching-netlify-payload.zip -d . && mkdir -p public && printf '%s\\n' '<!doctype html><html><head><meta charset=\"utf-8\"><title>aiTeaching MCP V2</title></head><body><h1>aiTeaching NEET Examiner V2</h1><p>MCP endpoint: <code>/.netlify/functions/mcp</code></p></body></html>' > public/index.html"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "express": "^5.1.0",
+    "firebase-admin": "^13.5.0",
     "serverless-http": "^3.2.0",
     "zod": "^3.25.0"
   }
